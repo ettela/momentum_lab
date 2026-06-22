@@ -19,7 +19,7 @@ dev = ["pytest>=9.0.3", "ruff>=0.15.10", "ty>=0.0.50"]
 
 
 [tool.ruff]
-ignore = ["F405", "F403"]
+lint.ignore = ["F405", "F403"]
 
 [project.scripts]
 "momentlab" = "momentum_lab.__main__:main"
