@@ -11,25 +11,22 @@ dependencies = [
     "pygame>=2.6.1",
 ]
 
+license = "MIT"
+license-files = ["LICENSE"]
+
 [dependency-groups]
-dev = [
-    "pytest>=9.0.3",
-    "ruff>=0.15.10",
-    "ty>=0.0.50",
-]
+dev = ["pytest>=9.0.3", "ruff>=0.15.10", "ty>=0.0.50"]
 
 
 [tool.ruff]
 ignore = ["F405", "F403"]
 
 [project.scripts]
-"moment_lab" = "momentum_lab.__main__:main"
+"momentlab" = "momentum_lab.__main__:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build]
-include = [
-  "/momentum_lab"
-]
+include = ["/momentum_lab"]
