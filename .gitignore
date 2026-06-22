@@ -2,7 +2,7 @@
 **/*.egg-info
 **/outputs
 **/test
-uv.lock
+# uv.lock
 .venv
 *_cache
 dist
