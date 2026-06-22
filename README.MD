@@ -66,5 +66,15 @@ $$ -->
 
 ### 数据导出部分
 
-`export.chart.py`
+`export.chart.py` 绘制图表
 
+
+### 主要 UI 界面
+
+`ui.scene.py` 模拟交互,面板
+
+辅助文件
+
+`ui.const.py`   颜色,布局常数
+`ui.dispaly.py` 布局工具
+`ui.surface.py` 显示工具
