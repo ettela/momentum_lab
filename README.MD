@@ -6,22 +6,46 @@
 ## 项目依赖、结构
 > 采用 `pygame` 作为主要可视化演示途径。
 >
-> 使用 `numpy` `scipy` 处理原始实验模拟数据。
+> 使用 `numpy` 处理原始实验模拟数据。
 >
 > 通过 `matplotlib` `pandas` 导出实验图表
 ```
-/src
-├── ui      # 可视化交互部分 pygame
-├── model   # 物理部分       numpy scipy
-└── export  # 数据导出       matplotlib pandas
+.
+├── LICENSE               # MIT 协议
+├── uv.lock               # 依赖
+├── pyproject.toml        # 项目配置
+├── momentum_lab          # 项目源文件
+│   ├── export            # 数据导出 matplotlib pandas
+│   │   ├── __init__.py
+│   │   └── chart.py
+│   ├── model             # 物理部分 numpy
+│   │   ├── __init__.py
+│   │   └── block.py
+│   │── ui                # 可视化交互部分 pygame
+│   │   ├── __init__.py
+│   │   ├── const.py
+│   │   ├── display.py
+│   │   ├── surface.py
+│   │   └── scene.py
+│   ├── __init__.py
+│   └── __main__.py       # 入口文件
+└── README.MD
 ```
 
-## 物理部分
+## 使用
+```pwsh
+python -m pip install momentlab
+momentlab          # 交互实验界面
+momentlab --export [--e 0.5] # 仅导出图表 [可选:设定恢复系数]
+```
+
+### 物理部分
 
 动量守恒定律：
 $$
 F_{\text{合外力}} = 0, \quad \sum p_{\text{初态}} = \sum p_{\text{末态}}
 $$
+`model.block.py`
 
 理想化模型：
 + 物块 `Block`
@@ -32,4 +56,15 @@ $$
 + 两体正碰 `D`
   + block_1 物块对象
   + block_2 物块对象
-  + e 恢复系数(碰撞类型)
+  + e    恢复系数
+  + kind 碰撞类型
+
++ 枚举碰撞类型 `CollisionType`
+  + ELASTIC   完全弹性碰撞  
+  + PARTIAL   非完全弹性碰撞
+  + INELASTIC 完全非弹性碰撞  
+
+### 数据导出部分
+
+`export.chart.py`
+
