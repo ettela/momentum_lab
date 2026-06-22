@@ -1,4 +1,3 @@
-# ui/scene.py，主场景类，简洁中文注释
 from __future__ import annotations
 
 import sys
