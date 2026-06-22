@@ -1,0 +1,35 @@
+[project]
+name = "momentum-lab"
+version = "0.1.0"
+description = "探究动量守恒电子教具"
+readme = "README.MD"
+requires-python = ">=3.13.2"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "pygame>=2.6.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.10",
+    "ty>=0.0.50",
+]
+
+
+[tool.ruff]
+ignore = ["F405", "F403"]
+
+[project.scripts]
+"moment_lab" = "momentum_lab.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+  "/momentum_lab"
+]

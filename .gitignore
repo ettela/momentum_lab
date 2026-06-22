@@ -1,0 +1,8 @@
+**/__pycache__
+**/*.egg-info
+**/outputs
+**/test
+uv.lock
+.venv
+*_cache
+dist
