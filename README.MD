@@ -33,8 +33,8 @@
 ```
 
 ## 使用
-```pwsh
-python -m pip install momentlab
+```shell
+python -m pip install momentum-lab
 momentlab          # 交互实验界面
 momentlab --export [--e 0.5] # 仅导出图表 [可选:设定恢复系数]
 ```
