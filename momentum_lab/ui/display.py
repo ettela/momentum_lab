@@ -486,8 +486,8 @@ def draw_paused_overlay(screen: pg.Surface, fonts: Dict[str, pg.font.Font]) -> N
 def plot_history_df(
     df: pd.DataFrame, outdir: Path, scene: Optional["Scene"] = None
 ) -> List[Path]:
-    from src.momentum_lab.model.block import CollisionType
-    from src.momentum_lab.export.chart import plot_df
+    from momentum_lab.model.block import CollisionType
+    from momentum_lab.export.chart import plot_df
 
     outdir.mkdir(parents=True, exist_ok=True)
     csv_path = outdir / "collision_history.csv"
