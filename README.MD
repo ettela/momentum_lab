@@ -40,11 +40,11 @@ momentlab --export [--e 0.5] # 仅导出图表 [可选:设定恢复系数]
 ```
 
 ### 物理部分
-
+<!-- 
 动量守恒定律：
 $$
 F_{\text{合外力}} = 0, \quad \sum p_{\text{初态}} = \sum p_{\text{末态}}
-$$
+$$ -->
 `model.block.py`
 
 理想化模型：
